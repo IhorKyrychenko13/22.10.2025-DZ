@@ -5,34 +5,22 @@ using namespace std;
 class Vehicle {
 protected:
     char type[20];
-    char color[20];
+    char model[60];
+    char color[30];
     int year;
     double price;
     double maxSpeed;
 public:
-    Vehicle() {
-        strcpy_s(type, "Vehicle");
-        strcpy_s(color, "Невідомий");
-        year = 0;
-        price = 0;
-        maxSpeed = 0;
-    }
-    Vehicle(const char* type, const char* color, int year, double price, double maxSpeed) {
-        strcpy_s(this->type, type);
-        strcpy_s(this->color, color);
-        this->year = year;
-        this->price = price;
-        this->maxSpeed = maxSpeed;
-    }
-    virtual ~Vehicle() {}
-    const char* getType() const { return type; }
-    const char* getColor() const { return color; }
-    int getYear() const { return year; }
-    double getPrice() const { return price; }
-    double getMaxSpeed() const { return maxSpeed; }
-    void setColor(const char* c) { strcpy_s(color, c); }
-    void setYear(int y) { year = y; }
-    void setPrice(double p) { price = p; }
-    void setMaxSpeed(double s) { maxSpeed = s; }
+    Vehicle();
+    Vehicle(const char* typeName, const char* model, const char* color, int year, double price, double maxSpeed);
+    virtual ~Vehicle();
+    const char* getType() const;
+    const char* getModel() const;
+    const char* getColor() const;
+    int getYear() const;
+    double getPrice() const;
+    double getMaxSpeed() const;
+    void setColor(const char* c);
+    void setPrice(double p);
     virtual void show() const = 0;
 };

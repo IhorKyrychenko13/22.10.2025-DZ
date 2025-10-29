@@ -124,6 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="22.10.2025 DZ.cpp" />
+    <ClCompile Include="Bicycle.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Garage.cpp" />
+    <ClCompile Include="Lorry.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bicycle.h" />
@@ -131,6 +136,9 @@
     <ClInclude Include="Garage.h" />
     <ClInclude Include="Lorry.h" />
     <ClInclude Include="Vehicle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="garage.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
